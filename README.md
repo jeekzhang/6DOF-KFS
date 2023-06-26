@@ -36,41 +36,41 @@ $T_1-T_6$
 $A_1-A_6$
 相乘得到矩阵R
 
-$R = \begin{bmatrix} \text{{rot}}{3 \times 3} & P{3 \times 1} \ 0_{1 \times 3} & 1 \end{bmatrix}$
+$R = \begin{bmatrix} \text{rot}_{3\times3} & P_{3\times1} \\ 0_{1\times3} & 1 \end{bmatrix}$  
 $P_{3 \times 1} = (x, y, z)^T$
 
 则求出R即求出x,y,z
-关节矩阵$A_i$由当前的关节的$j_i$和DH参数导出
-设当前$j_i$为$\beta$,legth为$l$,d为$d$,angle为$\alpha$
-$$
-A_i=
-\left[
- \begin{matrix}
-   cos\beta & -sin\beta cos\alpha & sin\beta sin\alpha & lcos\beta \\
-   sin\beta & cos\beta cos\alpha & -cos\beta sin\alpha & lsin\beta \\
-   0 & sin\alpha & cos\alpha & d  \\
-   0 & 0 & 0 & 1 
-  \end{matrix} 
-\right]
-$$
+关节矩阵
+$A_i$
+由当前的关节的
+$j_i$
+和DH参数导出
+设当前
+$j_i$
+为
+$\beta$
+,legth为
+$l$
+,d为
+$d$
+,angle为
+$\alpha$
+
+$A_i = \begin{bmatrix} \cos(\beta) & -\sin(\beta)\cos(\alpha) & \sin(\beta)\sin(\alpha) & l\cos(\beta) \\ \sin(\beta) & \cos(\beta)\cos(\alpha) & -\cos(\beta)\sin(\alpha) & l\sin(\beta) \\ 0 & \sin(\alpha) & \cos(\alpha) & d \\ 0 & 0 & 0 & 1 \end{bmatrix}$
+
 $R=A_1A_2A_3A_4A_5A_6$
 
 然后再求rx,ry,rz
-$rot_{3*3}=
-\left[
- \begin{matrix}
-   r_{00} & r_{01} &  r_{02}  \\
-   r_{10} &  r_{11}  &  r_{12}  \\
-   r_{20} &  r_{21}  & r_{22}   \\
-  \end{matrix} 
-\right]
-$
+$rot_{3 \times 3} = \begin{bmatrix} r_{00} & r_{01} & r_{02} \\ r_{10} & r_{11} & r_{12} \\ r_{20} & r_{21} & r_{22} \end{bmatrix}$
+
 $rx = arctan(r[1][2], r[2][2])$
+
 $ry = arctan(r[0][2], \sqrt{r[0][0] ^2 + r[0][1]^2})$
+
 $rz = arctan(r[0][1], r[0][0])$
 
 ### 验证(UR5e)
-$j.txt:$
+j.txt:
 |57.3    |  57.3   |  57.3   |57.3   |57.3  | 57.3 |
 |--|--|--|--|--|--|
 
