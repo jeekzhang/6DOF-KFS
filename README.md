@@ -26,7 +26,9 @@ Kinematics Forward· Solver of 6 Degrees of Freedom
 |5|	0|	99.7|	-90|
 |6|	0|	99.6|	0|
 ### 计算
-根据DH参数表以及j1 - j6​，建立6个关节矩阵
+根据DH参数表以及
+$j_1 - j_6​$
+，建立6个关节矩阵
 $​A_1-A_6$
 计算出转换矩阵
 $T_1-T_6$
@@ -34,7 +36,8 @@ $T_1-T_6$
 $A_1-A_6$
 相乘得到矩阵R
 
-$R=\begin{bmatrix}
+$$
+R=\begin{bmatrix}
 {rot_{3*3}}&{P_{3*1}}\\
 {0_{1*3}}&{1}\\
 \end{bmatrix}$
