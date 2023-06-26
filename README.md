@@ -36,7 +36,8 @@ $T_1-T_6$
 $A_1-A_6$
 相乘得到矩阵R
 
-$R = \begin{bmatrix} \text{{rot}}{3 \times 3} & P{3 \times 1} \ 0_{1 \times 3} & 1 \end{bmatrix}$, $P_{3 \times 1} = (x, y, z)^T$
+$R = \begin{bmatrix} \text{{rot}}{3 \times 3} & P{3 \times 1} \ 0_{1 \times 3} & 1 \end{bmatrix}$
+$P_{3 \times 1} = (x, y, z)^T$
 
 则求出R即求出x,y,z
 关节矩阵$A_i$由当前的关节的$j_i$和DH参数导出
