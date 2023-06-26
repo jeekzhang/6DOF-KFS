@@ -1,8 +1,9 @@
-/* 6轴机器人运动正解
- * 关节角度在文件我放在"D:\\j.txt"中
- * 机器人参数在文件"D:\\dh.txt"中
- * x,y,z,rx,ry,rz在屏幕输出
- * 原代码来自https://blog.csdn.net/weixin_37942267/article/details/78806448?spm=1001.2014.3001.5502*/
+/* 6-DOF Robot Forward Kinematics
+
+Joint angles are stored in the file "j.txt"
+Robot parameters are stored in the file "dh.txt"
+Outputs x, y, z, rx, ry, rz on the screen
+Original code source: https://blog.csdn.net/weixin_37942267/article/details/78806448 */
 
 #include <stdio.h>
 #include <iostream>
@@ -12,8 +13,8 @@
 
 using namespace std;
 
-#define XYZ_F_J "D:\\j.txt"
-#define DESIGN_DT "D:\\dh.txt"
+#define XYZ_F_J ".\\j.txt"
+#define DESIGN_DT ".\\dh.txt"
 
 #define RAD2ANG (3.1415926535898 / 180.0)
 #define ANG2RAD (180.0 / 3.1415926535898)
@@ -164,8 +165,8 @@ int main()
 
     initmatrix_A(param_table);
 
-    计算变换矩阵 matrix T1-- - T6
-                                   matrix_copy(matrix_A1, matrix_T1, MATRIX_N, MATRIX_N);
+    //计算变换矩阵 matrix T1--- T6
+    matrix_copy(matrix_A1, matrix_T1, MATRIX_N, MATRIX_N);
 
     matrix_mul(matrix_T1, matrix_A2, matrix_T2);
 

@@ -4,9 +4,7 @@ Kinematics Forward· Solver of 6 Degrees of Freedom
 ## 理论部分
 #### 概念
 运动学正解，简而言之，就是给出6个关节变量，求得机械臂末端的位置和姿态
-即给出
-$j_1 - j_6$​
-，求x,y,z,rx,ry,rz​
+即给出$j_1 - j_6$​，求x,y,z,rx,ry,rz​
 
 #### DH参数
 只单一地给出关节值或直角坐标值，是不能直接互相转化的，还与具体的机器人有关，这部分有关的内容可以用DH参数表来表示，其描述了机器人各关节坐标系之间的关系
@@ -28,36 +26,13 @@ $j_1 - j_6$​
 |5|	0|	99.7|	-90|
 |6|	0|	99.6|	0|
 ### 计算
-根据DH参数表以及
-$j_1 - j_6$
-，建立6个关节矩阵
-$​A_1-A_6$
-计算出转换矩阵
-$T_1-T_6$
-，计算
-$A_1-A_6$
-相乘得到矩阵R
+根据DH参数表以及$j_1 - j_6$，建立6个关节矩阵$A_1-A_6$计算出转换矩阵$T_1-T_6$，计算$A_1-A_6$相乘得到矩阵R
 
 $R = \begin{bmatrix} \text{rot}_{3\times3} & P_{3\times1} \\ 0_{1\times3} & 1 \end{bmatrix}$
 
 $P_{3 \times 1} = (x, y, z)^T$
 
-则求出R即求出x,y,z
-关节矩阵
-$A_i$
-由当前的关节的
-$j_i$
-和DH参数导出
-设当前
-$j_i$
-为
-$\beta$
-,legth为
-$l$
-,d为
-$d$
-,angle为
-$\alpha$
+则求出R即求出x,y,z关节矩阵$A_i$由当前的关节的$j_i$和DH参数导出，设当前$j_i$为$\beta$，legth为$l$，d为$d$，angle为$\alpha$
 
 $A_i = \begin{bmatrix} \cos(\beta) & -\sin(\beta)\cos(\alpha) & \sin(\beta)\sin(\alpha) & l\cos(\beta) \\ \sin(\beta) & \cos(\beta)\cos(\alpha) & -\cos(\beta)\sin(\alpha) & l\sin(\beta) \\ 0 & \sin(\alpha) & \cos(\alpha) & d \\ 0 & 0 & 0 & 1 \end{bmatrix}$
 
