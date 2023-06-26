@@ -4,7 +4,9 @@ Kinematics Forward· Solver of 6 Degrees of Freedom
 ## 理论部分
 #### 概念
 运动学正解，简而言之，就是给出6个关节变量，求得机械臂末端的位置和姿态
-即给出j1 - j6​，求x,y,z,rx,ry,rz​
+即给出
+$j_1 - j_6$​
+，求x,y,z,rx,ry,rz​
 
 #### DH参数
 只单一地给出关节值或直角坐标值，是不能直接互相转化的，还与具体的机器人有关，这部分有关的内容可以用DH参数表来表示，其描述了机器人各关节坐标系之间的关系
@@ -36,7 +38,10 @@ $T_1-T_6$
 $A_1-A_6$
 相乘得到矩阵R
 
-$$R = \begin{bmatrix} \text{rot}_{3\times3} & P_{3\times1} \\ 0_{1\times3} & 1 \end{bmatrix}$$   
+R = 
+$[ rot_{3\times3}  P_{3\times1} ]$
+$[ 0_{1\times3}    1             ]$
+
 $P_{3 \times 1} = (x, y, z)^T$
 
 则求出R即求出x,y,z
