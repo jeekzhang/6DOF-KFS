@@ -36,7 +36,7 @@ $T_1-T_6$
 $A_1-A_6$
 相乘得到矩阵R
 
-$R = \begin{bmatrix} \text{rot}_{3\times3} & P_{3\times1} \\ 0_{1\times3} & 1 \end{bmatrix}$   
+$$R = \begin{bmatrix} \text{rot}_{3\times3} & P_{3\times1} \\ 0_{1\times3} & 1 \end{bmatrix}$$   
 $P_{3 \times 1} = (x, y, z)^T$
 
 则求出R即求出x,y,z
