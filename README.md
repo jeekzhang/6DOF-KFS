@@ -63,7 +63,7 @@ $A_i = \begin{bmatrix} \cos(\beta) & -\sin(\beta)\cos(\alpha) & \sin(\beta)\sin(
 
 $R=A_1A_2A_3A_4A_5A_6$
 
-然后再求rx,ry,rz
+然后再求rx,ry,rz  
 $rot_{3 \times 3} = \begin{bmatrix} r_{00} & r_{01} & r_{02} \\ r_{10} & r_{11} & r_{12} \\ r_{20} & r_{21} & r_{22} \end{bmatrix}$
 
 $rx = arctan(r[1][2], r[2][2])$
