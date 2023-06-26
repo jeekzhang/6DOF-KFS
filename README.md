@@ -38,8 +38,8 @@ $T_1-T_6$
 $A_1-A_6$
 相乘得到矩阵R
 
-R = 
-$[ rot_{3\times3}  P_{3\times1} ]$
+R =   
+$[ rot_{3\times3}  P_{3\times1} ]$  
 $[ 0_{1\times3}    1             ]$
 
 $P_{3 \times 1} = (x, y, z)^T$
