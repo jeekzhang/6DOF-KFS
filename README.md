@@ -26,7 +26,7 @@ Kinematics Forward· Solver of 6 Degrees of Freedom
 |5|	0|	99.7|	-90|
 |6|	0|	99.6|	0|
 ### 计算
-根据DH参数表以及$j_1 - j_6$，建立6个关节矩阵$A_1-A_6$计算出转换矩阵$T_1-T_6$，计算$A_1-A_6$相乘得到矩阵R
+根据DH参数表以及j<sub>1</sub> - j<sub>6</sub>，建立6个关节矩阵A<sub>1</sub>-A<sub>6</sub>计算出转换矩阵T<sub>1</sub>-T<sub>6</sub>，计算A<sub>1</sub>-A<sub>6</sub>相乘得到矩阵R
 
 $R = \begin{bmatrix} \text{rot}_{3\times3} & P_{3\times1} \\ 0_{1\times3} & 1 \end{bmatrix}$
 
