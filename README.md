@@ -32,7 +32,7 @@ $R = \begin{bmatrix} \text{rot}_{3\times3} & P_{3\times1} \\ 0_{1\times3} & 1 \e
 
 $P_{3 \times 1} = (x, y, z)^T$
 
-则求出R即求出x,y,z关节矩阵$A_i$由当前的关节的$j_i$和DH参数导出，设当前$j_i$为$\beta$，legth为$l$，d为$d$，angle为$\alpha$
+则求出R即求出x,y,z关节矩阵A<sub>1</sub>由当前的关节的j<sub>1</sub>和DH参数导出，设当前j<sub>1</sub>为$\beta$，legth为$l$，d为$d$，angle为$\alpha$
 
 $A_i = \begin{bmatrix} \cos(\beta) & -\sin(\beta)\cos(\alpha) & \sin(\beta)\sin(\alpha) & l\cos(\beta) \\ \sin(\beta) & \cos(\beta)\cos(\alpha) & -\cos(\beta)\sin(\alpha) & l\sin(\beta) \\ 0 & \sin(\alpha) & \cos(\alpha) & d \\ 0 & 0 & 0 & 1 \end{bmatrix}$
 
